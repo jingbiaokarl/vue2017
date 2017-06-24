@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="app">
+       <!--要重复谁，就在谁身上写v-for-->
+       <ul>
+           <!--a变量中代表的是arr中的某一个-->
+           <li v-for="(index,val) in arr" track-by="$index">
+               {{$index}} {{index}} {{val}}
+           </li>
+
+       </ul>
+       <!--遍历数组时 需要加 track-by=$index-->
+   </div>
+</body>
+<script src="vue1.0.js"></script>
+<script>
+    //绑定数组
+    new Vue({
+        el:'#app',
+        data:{
+            arr:['iphone','iphone7','iphone']
+        }
+    })
+</script>
+</html>
